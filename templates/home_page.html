@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Главная страница {% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+        <style>
+            body {
+    background-image:
+        {% if request.path == '/catalog/iphone' %}
+            url('/static/img/home_page.jpg')
+        {% elif request.path == '/catalog/iphone' %}
+            url('/static/img/static.img.macbook.jpg')
+        {% elif request.path == '/catalog/macbook' %}
+            url('/static/img/static.img.macbook.jpg')
+        {% else %}
+            url('/static/img/home_page.jpg')
+        {% endif %};
+            background-size: cover; / Изменяет размер изображения, чтобы покрыть весь экран /
+            background-repeat: no-repeat; / Изображение не повторяется /
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; / Цвет фона страницы /
+        }
+        </style>
+</head>
+<body>
+    {% block menu %}
+    <nav>
+        <div class="menu">
+            <a href="/catalog">Каталог</a>
+            <a href="/warranty">Гарантия</a>
+            <a href="/contacts">Контакты</a>
+        </div>
+    </nav>
+
+    {% endblock %}
+
+    {% block catalog_navigation %} {% endblock %}
+
+    {% block iphone %} {% endblock %}
+
+    {% block ipad %} %} {% endblock %}
+
+    {% block macbook %} {% endblock %}
+
+    {% block watch %} {% endblock %}
+
+</body>
+</html>

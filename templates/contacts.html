@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Услуги iOStrade{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/style3.css">
+</head>
+<body>
+
+    {% block menu %}
+    <nav>
+        <div class="menu">
+            <a href="/catalog">Каталог</a>
+            <a href="/warranty">Гарантия</a>
+            <a href="/contacts">Контакты</a>
+        </div>
+    </nav>
+    {% endblock %}
+
+    {% block content %}
+    <div class="contact-info">
+        <div class="column">
+            <div>iOStrade</div>
+            <br>
+            <div>+7 931 585-55-66</div>
+            <div>info@iostrade.com</div>
+        </div>
+        <div class="column">
+            <div>АДРЕС</div>
+            <br>
+            <div>г. Санкт-Петербург, ул. Петрозаводская, д.13</div>
+            <div>Россия</div>
+        </div>
+        <div class="column">
+            <div>ВРЕМЯ РАБОТЫ</div>
+            <br>
+            <div>c 11:00 до 21:00 без выходных</div>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block bottom_title %}
+    <div class="title">
+        <p >КОНТАКТЫ</p>
+    </div>
+    {% endblock %}
+
+</body>
+</html>
